@@ -1,0 +1,15 @@
+C:\Users\Daniel_Plemmons\Documents\Visual Studio 2010\Projects\ShadowDancer\ShadowDancer\ShadowDancer\bin\x86\Debug\Content\colMask.xnb
+C:\Users\Daniel_Plemmons\Documents\Visual Studio 2010\Projects\ShadowDancer\ShadowDancer\ShadowDancer\bin\x86\Debug\Content\circ.xnb
+C:\Users\Daniel_Plemmons\Documents\Visual Studio 2010\Projects\ShadowDancer\ShadowDancer\ShadowDancer\bin\x86\Debug\ShadowDancer.exe
+C:\Users\Daniel_Plemmons\Documents\Visual Studio 2010\Projects\ShadowDancer\ShadowDancer\ShadowDancer\bin\x86\Debug\ShadowDancer.pdb
+C:\Users\Daniel_Plemmons\Documents\Visual Studio 2010\Projects\ShadowDancer\ShadowDancer\ShadowDancer\bin\x86\Debug\FarseerPhysicsXNA.dll
+C:\Users\Daniel_Plemmons\Documents\Visual Studio 2010\Projects\ShadowDancer\ShadowDancer\ShadowDancer\bin\x86\Debug\FarseerPhysicsXNA.pdb
+C:\Users\Daniel_Plemmons\Documents\Visual Studio 2010\Projects\ShadowDancer\ShadowDancer\ShadowDancer\bin\x86\Debug\FarseerPhysicsXNA.xml
+C:\Users\Daniel_Plemmons\Documents\Visual Studio 2010\Projects\ShadowDancer\ShadowDancer\ShadowDancer\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Daniel_Plemmons\Documents\Visual Studio 2010\Projects\ShadowDancer\ShadowDancer\ShadowDancer\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Daniel_Plemmons\Documents\Visual Studio 2010\Projects\ShadowDancer\ShadowDancer\ShadowDancer\obj\x86\Debug\ShadowDancer.exe
+C:\Users\Daniel_Plemmons\Documents\Visual Studio 2010\Projects\ShadowDancer\ShadowDancer\ShadowDancer\obj\x86\Debug\ShadowDancer.pdb
+C:\Users\Daniel_Plemmons\Documents\Visual Studio 2010\Projects\ShadowDancer\ShadowDancer\ShadowDancer\bin\x86\Debug\Content\font.xnb
+C:\Users\Daniel_Plemmons\Documents\Visual Studio 2010\Projects\ShadowDancer\ShadowDancer\ShadowDancer\bin\x86\Debug\DebugViewXNA.dll
+C:\Users\Daniel_Plemmons\Documents\Visual Studio 2010\Projects\ShadowDancer\ShadowDancer\ShadowDancer\bin\x86\Debug\DebugViewXNA.pdb
+C:\Users\Daniel_Plemmons\Documents\Visual Studio 2010\Projects\ShadowDancer\ShadowDancer\ShadowDancer\bin\x86\Debug\DebugViewXNA.xml
