@@ -62,6 +62,8 @@ namespace ShadowDancer
         {
             // TODO: Add your initialization logic here
             world = new World(Vector2.Zero);
+            graphics.PreferredBackBufferHeight = 600;
+            graphics.PreferredBackBufferWidth = 800;
             debugViewXNA = new DebugViewXNA(world);
 
             base.Initialize();
@@ -76,29 +78,30 @@ namespace ShadowDancer
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            polyonTexture = Content.Load<Texture2D>("colMask");
+            //polyonTexture = Content.Load<Texture2D>("colMask");
             circleTexture = Content.Load<Texture2D>("circ");
-
+            /*
             data = new uint[polyonTexture.Width * polyonTexture.Height];
             polyonTexture.GetData(data);
             verts = PolygonTools.CreatePolygon(data, polyonTexture.Width, false);
             scale = new Vector2(0.07f, 0.07f);
             verts.Scale(ref scale);
             List<Vertices> _list = BayazitDecomposer.ConvexPartition(verts);
-            
+            */
 
             // TODO: use this.Content to load your game content here
             
 
             Vector2 circPos = new Vector2(500, 100) / MeterInPixels;
-            myBody = BodyFactory.CreateCircle(world, 32f/(2f * MeterInPixels), 1, circPos);
+            myBody = BodyFactory.CreateCircle(world, (32f / MeterInPixels)/2, 1, circPos);
             myBody.BodyType = BodyType.Dynamic;
-            myBody.Restitution = 0.3f;
-            myBody.Friction = 0.5f;
-            myBody.ApplyLinearImpulse(new Vector2(0,0.1f));
+            myBody.Restitution = .3f;
+            //myBody.Friction = 0.5f;
+            myBody.ApplyLinearImpulse(new Vector2(0,.3f));
 
-            Vector2 groundPos = new Vector2(500, 200) / MeterInPixels;
-            compund = BodyFactory.CreateCompoundPolygon(world, _list, 1f, groundPos);
+            Vector2 groundPos = new Vector2(510, 200) / MeterInPixels;
+            compund = BodyFactory.CreateCircle(world, (32f / MeterInPixels) / 2, 1, groundPos);         
+            //compund = BodyFactory.CreateCompoundPolygon(world, _list, 1f, groundPos);
             compund.BodyType = BodyType.Static;
 
             debugViewXNA.LoadContent(GraphicsDevice, Content);
@@ -142,19 +145,19 @@ namespace ShadowDancer
             Vector2 circlePos = myBody.Position * MeterInPixels;
             Vector2 groundPos = compund.Position * MeterInPixels;
             Debug.WriteLine("circlePOS: " + circlePos);
-            Debug.WriteLine("myBody: " + myBody.Position);
+            //Debug.WriteLine("myBody: " + myBody.Position);
             Debug.WriteLine("groundPOS: " + groundPos);
 
             Vector2 circleOrigin = new Vector2(
                 circleTexture.Width/2f,
                 circleTexture.Height/2f);
-            Vector2 groundOrigin = new Vector2(
+            /*Vector2 groundOrigin = new Vector2(
                 polyonTexture.Width/2f,
-                polyonTexture.Height/2f);
+                polyonTexture.Height/2f);*/
 
             spriteBatch.Begin();
             spriteBatch.Draw(circleTexture, circlePos, null, Color.White, 0f, circleOrigin, 1f, SpriteEffects.None, 0f);  
-            spriteBatch.Draw(polyonTexture, groundPos, null, Color.White, 0f, groundOrigin, 1f, SpriteEffects.None, 0f);
+            spriteBatch.Draw(circleTexture, groundPos, null, Color.White, 0f, circleOrigin, 1f, SpriteEffects.None, 0f);
             DebugDraw();
             spriteBatch.End();
 
