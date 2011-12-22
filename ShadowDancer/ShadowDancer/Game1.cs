@@ -97,9 +97,8 @@ namespace ShadowDancer
             Vector2 circPos = new Vector2(500, 100) / MeterInPixels;
             myBody = BodyFactory.CreateCircle(world, (32f / MeterInPixels)/2, 1, circPos);
             myBody.BodyType = BodyType.Dynamic;
-            //myBody.Restitution = .01f;
+            myBody.Restitution = .2f;
             myBody.Friction = 0.5f;
-            myBody.ApplyLinearImpulse(new Vector2(0,.3f));
 
             /*
             Vector2 groundPos = new Vector2(510, 200) / MeterInPixels;
@@ -107,12 +106,9 @@ namespace ShadowDancer
             compund = BodyFactory.CreateCompoundPolygon(world, _list, 1f, groundPos);
             compund.BodyType = BodyType.Static;
             */
-            gOrigin = new Vector2(
-                polyonTexture.Width / 2f,
-                polyonTexture.Height / 2f);
-            List<Vertices> vertices = ToVertices(polyonTexture, out gOrigin);
-            compund = BodyFactory.CreateCompoundPolygon(world, vertices, 1f);
-            compund.Position = new Vector2(510, 300) / MeterInPixels;
+            
+            
+            
 
             debugViewXNA.LoadContent(GraphicsDevice, Content);
         }
@@ -137,6 +133,17 @@ namespace ShadowDancer
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
+            if (compund != null)
+            {
+                world.RemoveBody(compund);
+            }
+            
+            gOrigin = new Vector2(
+                polyonTexture.Width / 2f,
+                polyonTexture.Height / 2f);
+            List<Vertices> vertices = ToVertices(polyonTexture, out gOrigin);
+            compund = BodyFactory.CreateCompoundPolygon(world, vertices, 1f);
+            compund.Position = new Vector2(510, 300) / MeterInPixels;
             // TODO: Add your update logic here
             world.Step((float)gameTime.ElapsedGameTime.TotalMilliseconds * 0.001f);
 
